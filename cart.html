@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - NHANH Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (same as index.html) -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">NHANH</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-blue-600">Products</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Categories</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <a href="cart.html" class="text-blue-600"><i class="fas fa-shopping-cart text-xl"></i></a>
+                <a href="#" class="text-gray-700 hover:text-blue-600"><i class="fas fa-user text-xl"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Section -->
+    <section class="py-12 container mx-auto px-4">
+        <h1 class="text-3xl font-bold mb-8">Your Shopping Cart</h1>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Cart Items Table -->
+            <table class="w-full">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Product</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Price</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Quantity</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Total</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <!-- Cart Item 1 -->
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg" alt="Product" class="h-16 w-16 object-cover rounded">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-medium text-gray-900">Wireless Headphones</h3>
+                                    <p class="text-sm text-gray-500">SKU: WH-001</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">$59.99</td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center border rounded-md w-24">
+                                <button class="px-2 py-1 text-gray-600">-</button>
+                                <input type="text" value="1" class="w-8 text-center border-x">
+                                <button class="px-2 py-1 text-gray-600">+</button>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">$59.99</td>
+                        <td class="px-6 py-4">
+                            <button class="text-red-600 hover:text-red-800">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <!-- Cart Item 2 -->
+                    <tr>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg" alt="Product" class="h-16 w-16 object-cover rounded">
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-medium text-gray-900">Smart Watch</h3>
+                                    <p class="text-sm text-gray-500">SKU: SW-002</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">$129.99</td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center border rounded-md w-24">
+                                <button class="px-2 py-1 text-gray-600">-</button>
+                                <input type="text" value="1" class="w-8 text-center border-x">
+                                <button class="px-2 py-1 text-gray-600">+</button>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">$129.99</td>
+                        <td class="px-6 py-4">
+                            <button class="text-red-600 hover:text-red-800">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Cart Summary -->
+            <div class="p-6 bg-gray-50 border-t">
+                <div class="flex justify-between">
+                    <div class="w-1/2 pr-4">
+                        <h3 class="text-lg font-medium mb-2">Special Instructions</h3>
+                        <textarea class="w-full border rounded p-2 h-24" placeholder="Any special notes for your order..."></textarea>
+                    </div>
+                    <div class="w-1/2 pl-4">
+                        <div class="bg-white p-4 rounded border">
+                            <h3 class="text-lg font-medium mb-4">Order Summary</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between">
+                                    <span>Subtotal</span>
+                                    <span>$189.98</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Shipping</span>
+                                    <span>$5.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Tax</span>
+                                    <span>$15.20</span>
+                                </div>
+                                <div class="border-t pt-2 flex justify-between font-bold">
+                                    <span>Total</span>
+                                    <span>$210.18</span>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition duration-300">
+                                Proceed to Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue Shopping Link -->
+        <div class="mt-6 text-center">
+            <a href="products.html" class="text-blue-600 hover:underline">
+                <i class="fas fa-arrow-left mr-2"></i> Continue Shopping
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">NHANH Store</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your needs.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Us</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Store Street, City</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i> +1 234 567 890</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@nhanhstore.com</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 NHANH Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Quantity adjustment functionality
+        document.querySelectorAll('.quantity button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const input = e.target.parentElement.querySelector('input');
+                let value = parseInt(input.value);
+                
+                if (e.target.textContent === '+' && value < 10) {
+                    input.value = value + 1;
+                } else if (e.target.textContent === '-' && value > 1) {
+                    input.value = value - 1;
+                }
+            });
+        });
+
+        // Remove item functionality
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', () => {
+                if (confirm('Are you sure you want to remove this item?')) {
+                    button.closest('tr').remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
